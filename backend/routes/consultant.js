@@ -1,5 +1,5 @@
-const router = require('express').Route()
-const {consultantIndex,createConsultant,editConsultant,deleteConsultant} = require('../controller/consultant')
+const router = require('express').Router()
+const {consultantIndex,createConsultant,editConsultant,removeConsultant} = require('../controller/consultant')
 
 /* load page */
 router.route('/').get(consultantIndex)
@@ -11,5 +11,6 @@ router.route('/create').post(createConsultant)
 router.route('/update/:id').put(editConsultant)
 
 /* Delete  a dealer */
-router.route('/delete/:id').delete(deleteConsultant)
+router.route('/delete/:id').delete(removeConsultant)
 
+module.exports = router

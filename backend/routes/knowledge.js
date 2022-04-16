@@ -1,5 +1,5 @@
-    const router = require('express').Route()
-    const {knowledgeIndex,createKnowledge,editKnowledge,deleteKnowledge} = require('../controller/knowledge')
+    const router = require('express').Router()
+    const {knowledgeIndex,createKnowledge,editKnowledge,removeKnowledge} = require('../controller/knowledge')
 
 
 /* load page */
@@ -12,4 +12,6 @@ router.route('/create').post(createKnowledge)
 router.route('/update/:id').put(editKnowledge)
 
 /* Delete knowledge */
-router.route('/delete/:id').delete(deleteKnowledge)
+router.route('/delete/:id').delete(removeKnowledge)
+
+module.exports = router

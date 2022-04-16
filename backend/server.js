@@ -10,16 +10,25 @@
    const app = express()
 
 
-   app.listen(port, console.log(   ` app is running at port ${port}`))
-
 
    app.use(express.json())
 
-   app.use('/', require('./routes/dashboard'))
-   app.use('/account', require('./routes/account'))
-   app.use('/farmer', require('./routes/farmer'))
-   app.use('/consultant', require('./routes/consultant'))
-   app.use('/report', require('./routes/report'))
-   app.use('/developer', require('./routes/developer'))
-   app.use('/knowledge', require('./routes/knowledge')) 
+   const dashboard = require('./routes/dashboard')
+   const investor = require('./routes/investor')
+   /* const farmer  = require('./routes/farmer') */
+   const consultant = require('./routes/consultant')
+   const report = require('./routes/report')
+   const developer = require('./routes/developer')
+   const knowledge = require('./routes/knowledge')
 
+   app.use('/', dashboard)
+   app.use('/investor', investor)
+   /* app.use('/farmer', farmer) */
+   app.use('/consultant', consultant)
+   app.use('/report', report)
+   app.use('/developer', developer)
+   app.use('/knowledge', knowledge)
+
+
+
+   app.listen(port, console.log(   ` app is running at port ${port}`))

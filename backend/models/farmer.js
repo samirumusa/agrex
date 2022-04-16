@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
-const consultantSchema = new Schema({
+const farmerSchema = new Schema({
     title:{type:String, require:true, maxlength:100 },
     firstname:{type:String, require:true, maxlength:100 },
     secondname:{type:String, require:true, maxlength:100 },
@@ -23,9 +23,10 @@ const consultantSchema = new Schema({
     nofkin:{type:String, require:true, maxlength:200 },
     nofkinaddress:{type:String, require:true, maxlength:300 },
     raddress:{type:String, require:true, maxlength:200 },
-    timeStamp:true
-})
+    
+}, {
+    timeStamp:true})
 
-const consultantModel = mongoose.Model('consultant',consultantSchema)
-module.exports = consultantModel
+const farmerModel = mongoose.model('farmer',farmerSchema)
+module.exports = farmerModel
 

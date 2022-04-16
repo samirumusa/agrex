@@ -1,5 +1,5 @@
-        const router = require('express').Route()
-        const {investorIndex,createInvestor,editInvestor,deleteInvestor} = require('../controller/investor')
+        const router = require('express').Router()
+        const {investorIndex,createInvestor,editInvestor,removeInvestor} = require('../controller/investor')
 
 /* load page */
 router.route('/').get(investorIndex)
@@ -11,4 +11,5 @@ router.route('/create').post(createInvestor)
 router.route('/update/:id').put(editInvestor)
 
 /* Delete investor */
-router.route('/delete/:id').delete(deleteInvestor)
+router.route('/delete/:id').delete(removeInvestor)
+module.exports = router

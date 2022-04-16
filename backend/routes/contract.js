@@ -1,4 +1,4 @@
-const router = require('express').Route()
+const router = require('express').Router()
 
 
 /* load page */
@@ -20,3 +20,5 @@ router.route('/update/:id').put((req,res)=>{
 router.route('/delete/:id').delete((req,res)=>{
 
 })
+
+module.exports = router

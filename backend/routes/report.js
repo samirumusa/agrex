@@ -1,5 +1,5 @@
-const router = require('express').Route()
-const {reportIndex,createReport,editReport,deleteReport} = require('../controller/report')
+const router = require('express').Router()
+const {reportIndex,createReport,editReport,removeReport} = require('../controller/report')
 
 
 /* load page */
@@ -12,4 +12,6 @@ router.route('/create').post(createReport)
 router.route('/update/:id').put(editReport)
 
 /* Delete report */
-router.route('/delete/:id').delete(deleteReport)
+router.route('/delete/:id').delete(removeReport)
+
+module.exports = router

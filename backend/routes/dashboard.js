@@ -1,4 +1,4 @@
-   const router = require('express').Route()
+   const router = require('express').Router()
    const {dashboard} = require('../controller/dashboard')
 
 
@@ -6,3 +6,4 @@
    
   
 
+   module.exports = router

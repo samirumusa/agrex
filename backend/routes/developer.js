@@ -1,5 +1,5 @@
-const router = require('express').Route()
-const {developerIndex,createDeveloper,editDeveloper,deleteDeveloper} = require('../controller/developer')
+const router = require('express').Router()
+const {developerIndex,createDeveloper,editDeveloper,removeDeveloper} = require('../controller/developer')
 
 /* load page */
 router.route('/').get(developerIndex)
@@ -11,4 +11,5 @@ router.route('/create').post(createDeveloper)
 router.route('/update/:id').put(editDeveloper)
 
 /* Delete doc */
-router.route('/delete/:id').delete(deleteDeveloper)
+router.route('/delete/:id').delete(removeDeveloper)
+module.exports = router

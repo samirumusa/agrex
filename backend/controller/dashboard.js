@@ -1,7 +1,3 @@
-       const knowledgemodel = require('../models/knowledge')
-
-
-
 
 const dashboard =(req, res)=>{
 

@@ -1,5 +1,5 @@
-const router = require('express').Route()
-const {accountIndex,createAccount,editAccount,deleteAccount} = require('../controller/account')
+const router = require('express').Router()
+const {accountIndex,createAccount,editAccount,removeAccount} = require('../controller/account')
 
 
 
@@ -13,4 +13,6 @@ router.route('/create').post(createAccount)
 router.route('/:id').put(editAccount)
 
 /* Delete Account */
-router.route('/:id').delete(deleteAccount)
+router.route('/:id').delete(removeAccount)
+
+module.exports = router

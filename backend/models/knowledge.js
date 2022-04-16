@@ -6,9 +6,10 @@ const knowledgeSchema = new Schema({
     title:{type:String, require:true, maxlength:100 },
     description:{type:String, require:true},
     author: {type:String, require:false},
-    timeStamp:true
-})
+    
+}, {
+    timeStamp:true})
 
-const knowledgeModel = mongoose.Model('knowledge',knowledgeSchema)
+const knowledgeModel = mongoose.model('knowledge',knowledgeSchema)
 
 module.exports = knowledgeModel

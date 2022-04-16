@@ -20,9 +20,10 @@ const consultantSchema = new Schema({
     email:{type:String, require:true, maxlength:200 },
     picture:{type:String, require:true, maxlength:200 },
     address:{type:String, require:true, maxlength:200 },
-    timeStamp:true
-})
+    
+} ,{
+    timeStamp:true})
 
-const consultantModel = mongoose.Model('consultant',consultantSchema)
+const consultantModel = mongoose.model('consultant',consultantSchema)
 
 module.exports = consultantModel
