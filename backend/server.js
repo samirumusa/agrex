@@ -15,11 +15,11 @@
 
    app.use(express.json())
 
-   /* app.use('/', require('../routes/index'))
-   app.use('/account', require('../routes/account'))
-   app.use('/farmer', require('../routes/farmer'))
-   app.use('/consultant', require('../routes/consultant'))
-   app.use('/report', require('../routes/report'))
-   app.use('/developer', require('../routes/developer'))
-   app.use('/knowledge', require('../routes/knowledge')) */
+   app.use('/', require('./routes/dashboard'))
+   app.use('/account', require('./routes/account'))
+   app.use('/farmer', require('./routes/farmer'))
+   app.use('/consultant', require('./routes/consultant'))
+   app.use('/report', require('./routes/report'))
+   app.use('/developer', require('./routes/developer'))
+   app.use('/knowledge', require('./routes/knowledge')) 
 
