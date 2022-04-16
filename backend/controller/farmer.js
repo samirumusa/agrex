@@ -1,5 +1,18 @@
 const farmerModel = require('.../models/farmer')
 
+
+const farmerIndex =(req, res)=>{
+
+    try{
+        const data = req.body.data
+
+        res.status(200).json(data)
+    
+    }catch(err){
+       res.json(err)
+    }
+   
+}
 const createFarmer = (req, res)=>{
 
     let title = req.body.title
@@ -82,4 +95,5 @@ module.exports ={
     createFarmer,
     editFarmer,
     removeFarmer,
+    farmerIndex
 }

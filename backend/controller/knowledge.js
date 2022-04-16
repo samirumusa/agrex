@@ -3,6 +3,18 @@
 
 
 
+const knowledgeIndex =(req, res)=>{
+
+        try{
+            const data = req.body.data
+    
+            res.status(200).json(data)
+        
+        }catch(err){
+           res.json(err)
+        }
+       
+    }
 const createKnowledge = (req, res)=>{
 
     let title = req.body.title
@@ -48,4 +60,5 @@ module.exports ={
     createKnowledge,
     editKnowledge,
     removeKnowledge,
+    knowledgeIndex
 }

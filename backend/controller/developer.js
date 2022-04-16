@@ -1,5 +1,19 @@
        const developerModel = require('.../models/developer')
 
+
+
+const developerIndex =(req, res)=>{
+
+        try{
+            const data = req.body.data
+    
+            res.status(200).json(data)
+        
+        }catch(err){
+           res.json(err)
+        }
+       
+    }
 const createDeveloper = (req, res)=>{
 
     let title = req.body.title
@@ -45,4 +59,5 @@ module.exports ={
     createDeveloper,
     editDeveloper,
     removeDeveloper,
+    developerIndex
 }

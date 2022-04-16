@@ -1,5 +1,17 @@
 const consultantModel = require('.../models/consultant')
 
+const consultantIndex =(req, res)=>{
+
+    try{
+        const data = req.body.data
+
+        res.status(200).json(data)
+    
+    }catch(err){
+       res.json(err)
+    }
+   
+}
 const createConsultant = (req, res)=>{
 
     let title = req.body.title
@@ -91,4 +103,5 @@ module.exports ={
     createConsultant,
     editConsultant,
     removeConsultant,
+    consultantIndex
 }

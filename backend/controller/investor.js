@@ -95,4 +95,5 @@ module.exports ={
     createInvestor,
     editInvestor,
     removeInvestor,
+    investorIndex
 }

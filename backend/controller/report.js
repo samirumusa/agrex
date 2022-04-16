@@ -1,5 +1,17 @@
        const reportModel = require('.../models/report')
 
+ const reportIndex =(req, res)=>{
+
+        try{
+            const data = req.body.data
+    
+            res.status(200).json(data)
+        
+        }catch(err){
+           res.json(err)
+        }
+       
+    }
 const createReport = (req, res)=>{
 
     let title = req.body.title
@@ -48,4 +60,5 @@ module.exports ={
     createReport,
     editReport,
     removeReport,
+    reportIndex
 }
