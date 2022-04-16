@@ -37,7 +37,7 @@ const editReport = (req,res) =>{
     reportModel.findById(id).then((data)=>{
            data.title = req.body.title
            data.author  = req.body.author
-           data.report  = req.body.report
+           data.location  = req.body.location
            data.description = req.body.description
 
            data.save()

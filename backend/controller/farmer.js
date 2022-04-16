@@ -71,9 +71,27 @@ const editFarmer = (req,res) =>{
     let id = req.params.id
 
        farmerModel.findById(id).then((data)=>{
-           data.title = req.body.title
-           data.author  = req.body.title
-           data.description = req.body.description
+            data.title = req.body.title
+            data.firstname= req.body.firstname
+            data.secondname= req.body.secondname
+            data.lastname = req.body.lastname
+            data.idtype = req.body.idtype
+            data.idno = req.body.idno
+            data.phone = req.body.phone
+            data.jobtitle = req.body.jobtitle
+            data.position = req.body.position
+            data.hqualification = req.body.hqualification
+            data.picture = req.body.picture
+            data.utilitybill = req.body.utilitybill
+            data.nationality = req.body.nationality
+            data.state = req.body.state
+            data.lga = req.body.lga
+            data.email = req.body.email
+            data.dob = req.body.dob
+            data.nofkinphone = req.body.nofkinphone
+            data.nofkin = req.body.nofkin
+            data.nofkinaddress = req.body.nofkinaddress
+            data.raddress = req.body.raddress
 
            data.save()
            .then(()=>{res.status(200).json({message:'Farmer is updated, succesfully!'})})
