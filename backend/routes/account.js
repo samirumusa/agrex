@@ -1,5 +1,5 @@
 const router = require('express').Route()
-const {accountIndex,createAccount,editAccount,deleteAccount} = require('../controllrer/account')
+const {accountIndex,createAccount,editAccount,deleteAccount} = require('../controller/account')
 
 
 

@@ -1,4 +1,4 @@
-       const reportModel = require('.../models/report')
+       const reportModel = require('../models/report')
 
  const reportIndex =(req, res)=>{
 

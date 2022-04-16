@@ -1,4 +1,4 @@
-const consultantModel = require('.../models/consultant')
+const consultantModel = require('../models/consultant')
 
 const consultantIndex =(req, res)=>{
 

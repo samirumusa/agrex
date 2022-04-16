@@ -1,5 +1,5 @@
     const router = require('express').Route()
-    const {knowledgeIndex,createKnowledge,editKnowledge,deleteKnowledge} = require('../controllrer/knowledge')
+    const {knowledgeIndex,createKnowledge,editKnowledge,deleteKnowledge} = require('../controller/knowledge')
 
 
 /* load page */

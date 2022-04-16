@@ -1,5 +1,5 @@
 const router = require('express').Route()
-const {farmIndex,createFarm,editFarm,deleteFarm} = require('../controllrer/project')
+const {farmIndex,createFarm,editFarm,deleteFarm} = require('../controller/project')
 
 /* load page */
 router.route('/').get(farmIndex)

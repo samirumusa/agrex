@@ -1,5 +1,5 @@
         const router = require('express').Route()
-        const {investorIndex,createInvestor,editInvestor,deleteInvestor} = require('../controllrer/investor')
+        const {investorIndex,createInvestor,editInvestor,deleteInvestor} = require('../controller/investor')
 
 /* load page */
 router.route('/').get(investorIndex)

@@ -1,5 +1,5 @@
 const router = require('express').Route()
-const {reportIndex,createReport,editReport,deleteReport} = require('../controllrer/report')
+const {reportIndex,createReport,editReport,deleteReport} = require('../controller/report')
 
 
 /* load page */

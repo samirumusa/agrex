@@ -1,4 +1,4 @@
-       const knowledgemodel = require('.../models/knowledge')
+       const knowledgemodel = require('../models/knowledge')
 
 
 

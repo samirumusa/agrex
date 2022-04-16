@@ -1,5 +1,5 @@
 const router = require('express').Route()
-const {developerIndex,createDeveloper,editDeveloper,deleteDeveloper} = require('../controllrer/developer')
+const {developerIndex,createDeveloper,editDeveloper,deleteDeveloper} = require('../controller/developer')
 
 /* load page */
 router.route('/').get(developerIndex)

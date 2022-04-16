@@ -1,5 +1,5 @@
 const router = require('express').Route()
-const {consultantIndex,createConsultant,editConsultant,deleteConsultant} = require('../controllrer/consultant')
+const {consultantIndex,createConsultant,editConsultant,deleteConsultant} = require('../controller/consultant')
 
 /* load page */
 router.route('/').get(consultantIndex)

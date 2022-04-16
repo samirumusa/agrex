@@ -1,4 +1,4 @@
-const investorModel = require('.../models/investor')
+const investorModel = require('../models/investor')
 
 const investorIndex =(req, res)=>{
 

@@ -1,4 +1,4 @@
-       const developerModel = require('.../models/developer')
+       const developerModel = require('../models/developer')
 
 
 

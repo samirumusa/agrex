@@ -1,4 +1,4 @@
-const farmerModel = require('.../models/farmer')
+const farmerModel = require('../models/farmer')
 
 
 const farmerIndex =(req, res)=>{
@@ -100,7 +100,7 @@ const editFarmer = (req,res) =>{
     .catch((err)=>{res.json({error:err})})
 }
 
-const removeAccount =(req,res) =>{
+const removeFarmer =(req,res) =>{
       
     let id = req.params.id
 
