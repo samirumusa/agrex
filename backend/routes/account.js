@@ -4,7 +4,7 @@ const {accountIndex,createAccount,editAccount,deleteAccount} = require('../contr
 
 
 /* load page */
-router.route('/').get()
+router.route('/').get(accountIndex)
 
 /* create new account */
 router.route('/create').post(createAccount)
