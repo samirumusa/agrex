@@ -1,6 +1,19 @@
-const accountModel = require('.../models/account')
+const investorModel = require('.../models/investor')
 
-const createAccount = (req, res)=>{
+const investorIndex =(req, res)=>{
+
+    try{
+        const data = req.body.data
+
+        res.status(200).json(data)
+    
+    }catch(err){
+       res.json(err)
+    }
+   
+}
+
+const createInvestor = (req, res)=>{
 
     let title = req.body.title
     let firstname= req.body.firstname
@@ -25,7 +38,7 @@ const createAccount = (req, res)=>{
     let raddress = req.body.raddress
 
 
-    const accountTable = new accountModel({
+    const investorTable = new investorModel({
         title,
         firstname,
         secondname,
@@ -49,37 +62,37 @@ const createAccount = (req, res)=>{
         raddress
     })
 
-    accountTable.save()
-    .then(()=>{res.status(200).json({message:"New account is created successfully !"})})
+    investorTable.save()
+    .then(()=>{res.status(200).json({message:"New investor is created successfully !"})})
     .catch((err)=>{res.json({error:err})})
 }
 
-const editAccount = (req,res) =>{
+const editInvestor = (req,res) =>{
     let id = req.params.id
 
-    developerModel.findById(id).then((data)=>{
+    investorModel.findById(id).then((data)=>{
            data.title = req.body.title
            data.author  = req.body.title
            data.description = req.body.description
 
            data.save()
-           .then(()=>{res.status(200).json({message:'Account is updated, succesfully!'})})
+           .then(()=>{res.status(200).json({message:'investor is updated, succesfully!'})})
            .catch((err)=>{res.json({err})})
     })
     .catch((err)=>{res.json({error:err})})
 }
 
-const removeAccount =(req,res) =>{
+const removeInvestor =(req,res) =>{
       
     let id = req.params.id
 
-    developerModel.findByIdAndDelete(id) 
-    .then(()=>{res.status(200).json({message:`Account with id ${id} has been removed successfuly`})})
+    investorModel.findByIdAndDelete(id) 
+    .then(()=>{res.status(200).json({message:`investor with id ${id} has been removed successfuly`})})
     .catch((err)=>{res.json({error:err})})
 }
 
 module.exports ={
-    createAccount,
-    editAccount,
-    removeAccount,
+    createInvestor,
+    editInvestor,
+    removeInvestor,
 }
