@@ -5,7 +5,7 @@ const investorIndex =(req, res)=>{
     try{
         const data = req.body.data
 
-        res.status(200).json(data)
+        res.status(200).json('Welcome to the investors zone!')
     
     }catch(err){
        res.json(err)
