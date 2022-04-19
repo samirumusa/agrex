@@ -13,7 +13,7 @@ export default function AccountMenu(){
          <div className='container'>
              <div className='accountMenu'>
                  {MenuItems.map((item,idx)=>{
-                    return( <a href="/" className="accountMenuItem" key={idx}>{item}</a>) 
+                    return( <div className="navItem"><a href="/" className="accountMenuItem" key={idx}>{item}</a></div>) 
                  })}
                  
              </div>
